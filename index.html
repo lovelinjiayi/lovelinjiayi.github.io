@@ -26,7 +26,7 @@
 
             if (timeDifference <= 0) {
                 clearInterval(interval);
-                document.getElementById("countdown").innerHTML = "倒计时结束！";
+                document.getElementById("countdown").innerHTML = "生日快乐";
                 return;
             }
 
@@ -38,7 +38,7 @@
             document.getElementById("countdown").innerHTML = days + "天" + hours + "小时" + minutes + "分钟" + seconds + "秒";
         }
 
-        const targetDate = new Date("2023-12-31T00:00:00");
+        const targetDate = new Date("2024-02-10T00:00:00");
         const interval = setInterval(() => countdown(targetDate), 1000);
     </script>
 </body>
