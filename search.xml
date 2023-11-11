@@ -1,27 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>爱你</title>
-    <url>/2023/11/09/love%20you/</url>
-    <content><![CDATA[<p>到你生日那天还有102天，这是在2023年的11月9日给你写的。<br>今天是我们在一起的</p>
+    <title>Hello World</title>
+    <url>/2023/11/11/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
   <entry>
-    <title>一起走过的时光</title>
-    <url>/2023/11/11/%E4%B8%80%E8%B5%B7%E8%B5%B0%E8%BF%87%E7%9A%84%E6%97%B6%E5%85%89/</url>
-    <content><![CDATA[<p>我们已经一起走过了</p>
+    <title>hexo+github+git的使用</title>
+    <url>/2023/11/07/hexo-github-git%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>参考文章: <a href="https://blog.csdn.net/Principal_Z/article/details/130857852">https://blog.csdn.net/Principal_Z&#x2F;article&#x2F;details&#x2F;130857852</a><br>        <a href = "https://blog.csdn.net/weixin_43750300/article/details/127763836">https://blog.csdn.net/weixin_43750300&#x2F;article&#x2F;details&#x2F;127763836</a></p>
+<h2 id="安装git-node-js"><a href="#安装git-node-js" class="headerlink" title="安装git,node.js"></a>安装git,node.js</h2><p>在node.js目录下创建两个文件夹<br>node_cache<br>node_global<br>在cmd中输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config set prefix &quot;你node_global文件夹路径&quot;</span><br><span class="line">npm config set cache &quot;你node_cache文件夹路径&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="编辑环境变量"><a href="#编辑环境变量" class="headerlink" title="编辑环境变量"></a>编辑环境变量</h3><p>将含有npm路径的环境变量更改为自己node_global文件夹路径（如果没有这个变量，请自行添加）<br>添加NODE_PATH系统变量<br>路径为node_global内创建的node_modules文件夹<br>在环境变量PATH中添加：<br>%NODE_PATH%</p>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo_cli</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;github用户名&quot;</span><br><span class="line">git config --global user.email &quot;github注册账号用的邮箱&quot;</span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa #生成ssh公钥</span><br><span class="line">cat ./~ ssh rsa.pub #查找公钥</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试，上传网站"><a href="#测试，上传网站" class="headerlink" title="测试，上传网站"></a>测试，上传网站</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>!注意：小心端口冲突，使用的为localhost:4000</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>百度或上网寻找，使用npm指令</p>
 ]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+      </tags>
   </entry>
   <entry>
-    <title>其实。。。</title>
-    <url>/2023/11/08/%E5%85%B6%E5%AE%9E%E3%80%82%E3%80%82%E3%80%82/</url>
-    <content><![CDATA[<p>这个礼物准备挺久的啦，这是在你生日还有93天的时候写的。<br>每天都要棒棒哒，没超过我也没事，加油哦~,我等着你。 ————by11月8日的me</p>
+    <title>python语法</title>
+    <url>/2023/11/05/python%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<span id="more"></span>
+<h3 id="python数据类型"><a href="#python数据类型" class="headerlink" title="python数据类型"></a>python数据类型</h3><p>string 字符串<br>int 整数<br>float 浮点数<br>bool 浮点数</p>
+<h3 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h3><p>dictionary 字典（键值对用{}表示）<br>list 列表（有序存储，下标读取用[]表示）<br>tuple 元组（类似于列表，<strong>区别在于不可改变</strong>）<br>queue 队列(先进先出)<br>stack 栈（后进后出）</p>
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> :</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(a,b,c):</span><br></pre></td></tr></table></figure>
+<p>a表起始值<br>b表终止值<br>c表递增值<br><em>！注意</em><br>运行次数为 (b - a - 1) &#x2F; c<br><del>未完待续</del></p>
 ]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
   </entry>
   <entry>
-    <title>想你了</title>
-    <url>/2023/11/11/%E6%83%B3%E4%BD%A0%E4%BA%86/</url>
-    <content><![CDATA[<p>好无聊（伸懒腰），想你捏~</p>
+    <title>倒计时</title>
+    <url>/2023/11/04/%E4%BD%A0%E5%A5%BD/</url>
+    <content><![CDATA[<p>诶</p>
 ]]></content>
+      <categories>
+        <category>池塘</category>
+      </categories>
+      <tags>
+        <tag>公告</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>动态规划</title>
+    <url>/2023/11/05/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</url>
+    <content><![CDATA[<p>动态规划算法通常用于求解具有某种最优性质的问题。</p>
+<span id="more"></span>
+<h2 id="1-什么是动态规划算法？"><a href="#1-什么是动态规划算法？" class="headerlink" title="1.什么是动态规划算法？"></a>1.什么是动态规划算法？</h2><p>动态规划算法与分治法类似，其基本思想也是将待求解问题分解为若干个字问题<br><strong>！注意：</strong><br>经分解得到的子问题不是互相独立的，有些子问题会被重复计算多次<br>因此：<br><em>保存子问题求解答案，在需要时调用，减少重复运算，用空间换时间的方法我们称之为动态规划算法</em></p>
+<h2 id="2-使用动态规划算法求解的问题应有的基本要素"><a href="#2-使用动态规划算法求解的问题应有的基本要素" class="headerlink" title="2.使用动态规划算法求解的问题应有的基本要素"></a>2.使用动态规划算法求解的问题应有的基本要素</h2><p>1.重复子问题<br>求解问题时不总是都是新问题，而有子问题的复用<br>&#x3D;&#x3D;2.最优子结构（前提）&#x3D;&#x3D;<br>每个问题有最优解，所有问题的最优解加起来即是问题最优解<br>！注意：<br>最优解有只有仅一个</p>
+<h2 id="3-讲了那么多，来道例题"><a href="#3-讲了那么多，来道例题" class="headerlink" title="3.讲了那么多，来道例题"></a>3.讲了那么多，来道例题</h2><pre><code>在花园里西瓜数为N*N(n &gt;= 0 and &lt;= 31)，问从西北角出发走到东南角（只能从右或下走），怎么才能让自己拿到的西瓜更多？
+</code></pre>
+<p><em>输入样例：</em></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">3 3</span><br><span class="line">1 2 3</span><br><span class="line">4 5 6</span><br><span class="line">7 8 9</span><br></pre></td></tr></table></figure>
+<p>分析一下：<br>“从西北角出发” “到东南角”意味着只有一个最优解<br>那我们就可以在定义一个二维数组<code>result</code>用于存储子问题最优解<br>已知求数为最多，因此：我们可以将到东南角的求数，分解为一个个<br>小问题，也就是到每点所的最大求数，即可求解。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> result[<span class="number">31</span>][<span class="number">31</span>];</span><br><span class="line"><span class="type">int</span> value[<span class="number">31</span>][<span class="number">31</span>];</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">1</span>; j &lt;= n;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            cin &gt;&gt; value[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">1</span>; j &lt;= n;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            result[i][j] = <span class="built_in">max</span>(result[i<span class="number">-1</span>][j],result[i][j<span class="number">-1</span>]) + value[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; reuslt[n][n];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>c++算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>张梓杨是中科校草（超大声</title>
+    <url>/2023/11/06/%E5%BC%A0%E6%A2%93%E6%9D%A8%E6%98%AF%E4%B8%AD%E7%A7%91%E6%A0%A1%E8%8D%89%EF%BC%88%E8%B6%85%E5%A4%A7%E5%A3%B0/</url>
+    <content><![CDATA[<h3 id="啥都别说"><a href="#啥都别说" class="headerlink" title="啥都别说"></a>啥都别说</h3><h2 id="我觉得他是他就是"><a href="#我觉得他是他就是" class="headerlink" title="我觉得他是他就是"></a>我觉得他是他就是</h2><h1 id="张梓杨是中科校草！！！！！！！！！！！！"><a href="#张梓杨是中科校草！！！！！！！！！！！！" class="headerlink" title="张梓杨是中科校草！！！！！！！！！！！！"></a>张梓杨是中科校草！！！！！！！！！！！！</h1><h1 id="（溜-）"><a href="#（溜-）" class="headerlink" title="（溜~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~）"></a>（溜~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~）</h1>]]></content>
+      <categories>
+        <category>池塘</category>
+      </categories>
+      <tags>
+        <tag>公告</tag>
+      </tags>
   </entry>
 </search>
