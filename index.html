@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倒数日</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            font-size: 48px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="countdown"></h1>
+    <script>
+        function countdown(targetDate) {
+            const now = new Date();
+            const timeDifference = targetDate - now;
+
+            if (timeDifference <= 0) {
+                clearInterval(interval);
+                document.getElementById("countdown").innerHTML = "倒计时结束！";
+                return;
+            }
+
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = days + "天" + hours + "小时" + minutes + "分钟" + seconds + "秒";
+        }
+
+        const targetDate = new Date("2023-12-31T00:00:00");
+        const interval = setInterval(() => countdown(targetDate), 1000);
+    </script>
+</body>
+</html>
